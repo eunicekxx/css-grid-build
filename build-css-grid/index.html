@@ -1,89 +1,143 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Magazine</title>
 
     <link rel="stylesheet" href="css/styles.css">
+
+    <script src="js/main.js" defer></script>
 </head>
+
 <body>
     <header>
-        <h1><a href="index.html">Magazine</a></h1>
-        <button aria-expanded="false" aria-controls="nav">
-            <svg viewBox="0 0 100 80" width="40" height="40">
-                <title>Navigation Menu</title>
-                <rect width="100" height="20"></rect>
-                <rect y="30" width="100" height="20"></rect>
-                <rect y="60" width="100" height="20"></rect>
-              </svg>
-        </button>
-        <nav id="nav">
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="#">Popular</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Contact</a></li>
-            </ul>
-        </nav>
+        <div class="inner-container">
+            <h1><a href="index.html">Magazine</a></h1>
+            <button aria-expanded="false" aria-controls="nav">
+                <svg viewBox="0 0 100 80" width="40" height="40">
+                    <title>Navigation Menu</title>
+                    <rect width="100" height="20"></rect>
+                    <rect y="30" width="100" height="20"></rect>
+                    <rect y="60" width="100" height="20"></rect>
+                </svg>
+            </button>
+            <nav id="nav">
+                <ul class="menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#">Popular</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
     <main>
-        <section>
-            <h2>Recent Posts</h2>
-            <article>
-                <img src="img/healthy-breakfast-pots.jpg" alt="A jar of oatmeal and some fruit.">
-                <h3>Sept 14, 2024</h3>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officiis odio iusto, perferendis rerum possimus quas illum totam facilis eligendi iste, exercitationem libero dolorum doloremque dolorem doloribus necessitatibus, autem dicta voluptatem!</p>
-            </article>
-            <article>
-                <img src="img/holding-coffee-in-bed.jpg" alt="A person with a cup of coffee in bed.">
-                <h3>August 31, 2024</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut labore et est sint ducimus architecto vero aliquam debitis, facere libero. Deleniti atque facilis id ratione incidunt. Debitis inventore esse minus!</p>
-            </article>
-            <article>
-                <img src="img/legs-running-on-track.jpg" alt="Person running on a dirt track.">
-                <h3>August 17, 2024</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae id, fuga deserunt quo deleniti eius asperiores numquam commodi tempore. Fugiat ducimus odio fugit, excepturi ullam blanditiis iure maxime cum doloribus.</p>
-            </article>
-            <article>
-                <img src="img/writing-down-goals.jpg" alt="Writing down goals on a journal on a table.">
-                <h3>August 3, 2024</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium asperiores quo quam odio ratione saepe sunt, eveniet natus. Explicabo officiis ipsam culpa consequatur eaque provident perferendis dignissimos placeat impedit nemo.</p>
-            </article>
-            <article>
-                <img src="img/healthy-salad.jpg" alt="Closeup of a salad.">
-                <h3>July 20, 2024</h3>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eius exercitationem eveniet accusamus dolor reprehenderit omnis cupiditate, asperiores illum, soluta assumenda ea, nobis repudiandae totam nemo. Commodi enim vitae reiciendis consectetur?</p>
-            </article>
-        </section>
-        <section>
-            <h2>Popular Posts</h2>
-            <article>
-                <img src="img/vrkasana-yoga.jpg" alt="Person doing yoga on a rooftop.">
-                <h3>Benefits of Yoga</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam inventore natus, iure illum quas vero autem reiciendis modi dicta ipsum laudantium asperiores error, quis officiis maxime ab praesentium similique debitis!</p>
-            </article>
-            <article>
-                <img src="img/abstract.jpg" alt="Pink and orange abstract colors.">
-                <h3>Meditation for the Mind</h3>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ut dolor cumque nesciunt atque maxime libero numquam ipsam eum sunt? Libero at corporis repellat blanditiis alias autem molestias, minima officia aut.</p>
-            </article>
-            <article>
-                <img src="img/beach-at-sunrise.jpg" alt="Beach view at sunrise.">
-                <h3>Location, Location, Location</h3>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ut dolor cumque nesciunt atque maxime libero numquam ipsam eum sunt? Libero at corporis repellat blanditiis alias autem molestias, minima officia aut.</p>
-            </article>
-            <article>
-                <img src="img/cat-photo.jpg" alt="Close up of a cat's face.">
-                <h3>Family Pets</h3>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ut dolor cumque nesciunt atque maxime libero numquam ipsam eum sunt? Libero at corporis repellat blanditiis alias autem molestias, minima officia aut.</p>
-            </article>
-            <article>
-                <img src="img/beach-wind.jpg" alt="Person at the beach on a windy day.">
-                <h3>Taking Breaks</h3>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ut dolor cumque nesciunt atque maxime libero numquam ipsam eum sunt? Libero at corporis repellat blanditiis alias autem molestias, minima officia aut.</p>
-            </article>
-        </section>
+        <div class="grid-container">
+            <section class="recent-posts">
+                <h2>Recent Posts</h2>
+                <article>
+                    <img src="img/healthy-breakfast-pots.jpg" alt="A jar of oatmeal and some fruit.">
+                    <h3>Sept 14, 2024</h3>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officiis odio iusto, perferendis rerum
+                        possimus quas illum totam facilis eligendi iste, exercitationem libero dolorum doloremque
+                        dolorem
+                        doloribus necessitatibus, autem dicta voluptatem!</p>
+                </article>
+                <article>
+                    <img src="img/holding-coffee-in-bed.jpg" alt="A person with a cup of coffee in bed.">
+                    <h3>August 31, 2024</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut labore et est sint ducimus architecto
+                        vero aliquam debitis, facere libero. Deleniti atque facilis id ratione incidunt. Debitis
+                        inventore
+                        esse minus!</p>
+                </article>
+                <article>
+                    <img src="img/legs-running-on-track.jpg" alt="Person running on a dirt track.">
+                    <h3>August 17, 2024</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae id, fuga deserunt quo deleniti
+                        eius
+                        asperiores numquam commodi tempore. Fugiat ducimus odio fugit, excepturi ullam blanditiis iure
+                        maxime cum doloribus.</p>
+                </article>
+                <article>
+                    <img src="img/writing-down-goals.jpg" alt="Writing down goals on a journal on a table.">
+                    <h3>August 3, 2024</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium asperiores quo quam odio
+                        ratione
+                        saepe sunt, eveniet natus. Explicabo officiis ipsam culpa consequatur eaque provident
+                        perferendis
+                        dignissimos placeat impedit nemo.</p>
+                </article>
+                <article>
+                    <img src="img/healthy-salad.jpg" alt="Closeup of a salad.">
+                    <h3>July 20, 2024</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eius exercitationem eveniet accusamus
+                        dolor
+                        reprehenderit omnis cupiditate, asperiores illum, soluta assumenda ea, nobis repudiandae totam
+                        nemo.
+                        Commodi enim vitae reiciendis consectetur?</p>
+                </article>
+            </section>
+            <section class="popular-posts">
+                <h2>Popular Posts</h2>
+                <article>
+                    <img src="img/vrkasana-yoga.jpg" alt="Person doing yoga on a rooftop.">
+                    <div>
+                        <h3>Benefits of Yoga</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam inventore natus, iure
+                            illum
+                            quas
+                            vero autem reiciendis modi dicta ipsum laudantium asperiores error, quis officiis maxime ab
+                            praesentium similique debitis!</p>
+                    </div>
+                </article>
+                <article>
+                    <img src="img/abstract.jpg" alt="Pink and orange abstract colors.">
+                    <div>
+                        <h3>Meditation for the Mind</h3>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ut dolor cumque nesciunt atque
+                            maxime
+                            libero numquam ipsam eum sunt? Libero at corporis repellat blanditiis alias autem molestias,
+                            minima
+                            officia aut.</p>
+                    </div>
+                </article>
+                <article>
+                    <img src="img/beach-at-sunrise.jpg" alt="Beach view at sunrise.">
+                    <div>
+                        <h3>Location, Location, Location</h3>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ut dolor cumque nesciunt atque
+                            maxime
+                            libero numquam ipsam eum sunt? Libero at corporis repellat blanditiis alias autem molestias,
+                            minima
+                            officia aut.</p>
+                    </div>
+                </article>
+                <article>
+                    <img src="img/cat-photo.jpg" alt="Close up of a cat's face.">
+                    <div>
+                        <h3>Family Pets</h3>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ut dolor cumque nesciunt atque
+                            maxime
+                            libero numquam ipsam eum sunt? Libero at corporis repellat blanditiis alias autem molestias,
+                            minima
+                            officia aut.</p>
+                    </div>
+                </article>
+                <article>
+                    <img src="img/beach-wind.jpg" alt="Person at the beach on a windy day.">
+                    <div>
+                        <h3>Taking Breaks</h3>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ut dolor cumque nesciunt atque
+                            maxime
+                            libero numquam ipsam eum sunt? Libero at corporis repellat blanditiis alias autem molestias,
+                            minima
+                            officia aut.</p>
+                    </div>
+                </article>
+            </section>
     </main>
     <footer>
         <div>
@@ -114,5 +168,7 @@
             </form>
         </div>
     </footer>
+    </div>
 </body>
+
 </html>
