@@ -1,5 +1,6 @@
 @use 'colours' as *;
 @use 'breakpoints' as *;
+@use 'mixins' as *;
 
 header,
 section {
@@ -7,9 +8,7 @@ section {
 }
 
 .grid-container {
-    max-width: 1500px;
-    margin: 0 auto;
-    padding: 0 1rem;
+    @include container;
     display: grid;
     gap: 1rem;
 }
@@ -17,12 +16,15 @@ section {
 @media screen and (min-width: $small) {
     .grid-container {
         grid-template-columns: repeat(12, 1fr);
+
         .recent-posts {
             grid-column: 1 / span 6;
         }
+
         .popular-posts {
             grid-column: 7 / span 6;
         }
+
         footer {
             grid-column: 1 / -1;
         }
@@ -30,11 +32,14 @@ section {
 }
 
 @media screen and (min-width: $medium) {
-    .recent-posts {
-        grid-column: 1 / span 8;
-    }
-    .popular-posts {
-        grid-column: 9 / span 4;
+    .grid-container {
+        .recent-posts {
+            grid-column: 1 / span 8;
+        }
+
+        .popular-posts {
+            grid-column: 9 / span 4;
+        }
     }
 }
 

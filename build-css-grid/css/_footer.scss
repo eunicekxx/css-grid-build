@@ -1,0 +1,12 @@
+@use 'mixins' as *;
+
+footer {
+    @include container;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+
+    div {
+        flex: 1;
+    }
+}

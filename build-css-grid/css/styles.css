@@ -87,6 +87,12 @@ body {
   color: #111;
 }
 
+p {
+  margin-bottom: 32px;
+  letter-spacing: 1.92px;
+  word-spacing: 2.56px;
+}
+
 header {
   border-bottom: 1px solid #ccc;
   box-shadow: 0 0 8px #ccc;
@@ -94,7 +100,7 @@ header {
 header .inner-container {
   max-width: 1500px;
   margin: 0 auto;
-  padding: 1rem;
+  padding: 0 1rem;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -122,6 +128,19 @@ header .show {
   max-height: 200px;
 }
 
+@media screen and (min-width: 540px) {
+  header button {
+    display: none;
+  }
+  header nav {
+    flex: 0 0 auto;
+    max-height: unset;
+  }
+  header nav ul {
+    display: flex;
+    gap: 1rem;
+  }
+}
 header,
 section {
   margin-bottom: 50px;
@@ -133,6 +152,11 @@ section {
   padding: 0 1rem;
   display: grid;
   gap: 1rem;
+}
+@media screen and (min-width: 1900px) {
+  .grid-container {
+    max-width: 1850px;
+  }
 }
 
 @media screen and (min-width: 950px) {
@@ -149,11 +173,11 @@ section {
     grid-column: 1/-1;
   }
 }
-@media screen and (min-width: 1350px) {
-  .recent-posts {
+@media screen and (min-width: 1300px) {
+  .grid-container .recent-posts {
     grid-column: 1/span 8;
   }
-  .popular-posts {
+  .grid-container .popular-posts {
     grid-column: 9/span 4;
   }
 }
@@ -172,8 +196,14 @@ article {
   border-radius: 5px 5px 0 0;
 }
 
-p {
-  margin-bottom: 32px;
-  letter-spacing: 1.92px;
-  word-spacing: 2.56px;
+footer {
+  max-width: 1500px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+footer div {
+  flex: 1;
 }/*# sourceMappingURL=styles.css.map */

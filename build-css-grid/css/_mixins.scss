@@ -1,0 +1,11 @@
+@use 'breakpoints';
+
+@mixin container {
+    max-width: 1500px;
+    margin: 0 auto;
+    padding: 0 1rem;
+
+    @media screen and (min-width: $large) {
+        max-width: 1850px;
+    }
+}
