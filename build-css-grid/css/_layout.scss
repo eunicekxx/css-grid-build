@@ -11,6 +11,42 @@ section {
     @include container;
     display: grid;
     gap: 1rem;
+    align-items: start;
+}
+
+article {
+    margin-bottom: 32px;
+}
+
+.recent-posts {
+    img:first-of-type {
+        aspect-ratio: 625/417 auto;
+    }
+}
+
+.popular-posts {
+
+    h2 {
+        margin-bottom: 1rem;
+    }
+
+    article {
+        border: 1px solid $grey;
+        border-radius: 5px;
+        display: flex;
+        gap: 1rem;
+        
+
+        div {
+            padding: 1.5rem 1.5rem 0 1.5rem;
+        }
+
+        img {
+            border-radius: 5px 5px 0 0;
+            min-width: 400px;
+        }
+
+    }
 }
 
 @media screen and (min-width: $small) {
@@ -19,10 +55,21 @@ section {
 
         .recent-posts {
             grid-column: 1 / span 6;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+
+            h2,
+            article:first-of-type {
+                grid-column: 1 / -1;
+            }
         }
 
         .popular-posts {
             grid-column: 7 / span 6;
+            article {
+                display: block;
+            }
         }
 
         footer {
@@ -40,25 +87,5 @@ section {
         .popular-posts {
             grid-column: 9 / span 4;
         }
-    }
-}
-
-article {
-    margin-bottom: 32px;
-}
-
-.popular-posts {
-    article {
-        border: 1px solid $grey;
-        border-radius: 5px;
-
-        div {
-            padding: 1.5rem 1.5rem 0 1.5rem;
-        }
-
-        img {
-            border-radius: 5px 5px 0 0;
-        }
-
     }
 }

@@ -4,6 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description " content="A current online magazine blog for healthy eating habits and good mental health.">
+    
     <title>Magazine</title>
 
     <link rel="stylesheet" href="css/styles.css">
@@ -38,7 +40,15 @@
             <section class="recent-posts">
                 <h2>Recent Posts</h2>
                 <article>
-                    <img src="img/healthy-breakfast-pots.jpg" alt="A jar of oatmeal and some fruit.">
+                    <!-- This technique only loads the image that is needed. <picture> with the srcset loads both and picks which one is appropriate. -->
+                    <img
+                        src="img/healthy-breakfast-pots.jpg"
+                        srcset="img/healthy-breakfast-pots-sm.webp 626w,
+                                img/healthy-breakfast-pots-lg.webp 1207w"
+                                sizes="(max-width: 950px) 100vw,
+                                        (max-width: 1300px) 50vw,
+                                        (max-width: 1900px) calc(2/3vw)"
+                        alt="A jar of oatmeal and some fruit.">
                     <h3>Sept 14, 2024</h3>
                     <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officiis odio iusto, perferendis rerum
                         possimus quas illum totam facilis eligendi iste, exercitationem libero dolorum doloremque
@@ -46,7 +56,7 @@
                         doloribus necessitatibus, autem dicta voluptatem!</p>
                 </article>
                 <article>
-                    <img src="img/holding-coffee-in-bed.jpg" alt="A person with a cup of coffee in bed.">
+                    <img src="img/holding-coffee-in-bed.webp" alt="A person with a cup of coffee in bed.">
                     <h3>August 31, 2024</h3>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut labore et est sint ducimus architecto
                         vero aliquam debitis, facere libero. Deleniti atque facilis id ratione incidunt. Debitis
@@ -54,7 +64,7 @@
                         esse minus!</p>
                 </article>
                 <article>
-                    <img src="img/legs-running-on-track.jpg" alt="Person running on a dirt track.">
+                    <img src="img/legs-running-on-track.webp" alt="Person running on a dirt track.">
                     <h3>August 17, 2024</h3>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae id, fuga deserunt quo deleniti
                         eius
@@ -62,7 +72,7 @@
                         maxime cum doloribus.</p>
                 </article>
                 <article>
-                    <img src="img/writing-down-goals.jpg" alt="Writing down goals on a journal on a table.">
+                    <img src="img/writing-down-goals.webp" alt="Writing down goals on a journal on a table.">
                     <h3>August 3, 2024</h3>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium asperiores quo quam odio
                         ratione
@@ -71,7 +81,7 @@
                         dignissimos placeat impedit nemo.</p>
                 </article>
                 <article>
-                    <img src="img/healthy-salad.jpg" alt="Closeup of a salad.">
+                    <img src="img/healthy-salad.webp" alt="Closeup of a salad.">
                     <h3>July 20, 2024</h3>
                     <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eius exercitationem eveniet accusamus
                         dolor
@@ -84,8 +94,8 @@
                 <h2>Popular Posts</h2>
                 <article>
                     <picture>
-                        <source srcset="img/vrkasana-yoga.jpg" media="(min-width: 950px)">
-                        <img src="img/vrkasana-yoga-thumb.jpg" alt="Person doing yoga on a rooftop.">
+                        <source srcset="img/vrkasana-yoga.webp" media="(min-width: 950px)">
+                        <img src="img/vrkasana-yoga-thumb.webp" alt="Person doing yoga on a rooftop.">
                     </picture>
                     <div>
                         <h3>Benefits of Yoga</h3>
@@ -98,8 +108,8 @@
                 </article>
                 <article>
                     <picture>
-                        <source srcset="img/abstract.jpg" media="(min-width: 950px)">
-                        <img src="img/abstract-thumb.jpg" alt="Pink and orange abstract colors.">
+                        <source srcset="img/abstract.webp" media="(min-width: 950px)">
+                        <img src="img/abstract-thumb.webp" alt="Pink and orange abstract colors.">
                     </picture>
 
                     <div>
@@ -113,8 +123,8 @@
                 </article>
                 <article>
                     <picture>
-                        <source srcset="img/beach-at-sunrise.jpg" media="(min-width: 950px)">
-                        <img src="img/beach-at-sunrise-thumb.jpg" alt="Beach view at sunrise.">
+                        <source srcset="img/beach-at-sunrise.webp" media="(min-width: 950px)">
+                        <img src="img/beach-at-sunrise-thumb.webp" alt="Beach view at sunrise.">
                     </picture>
 
                     <div>
@@ -128,8 +138,8 @@
                 </article>
                 <article>
                     <picture>
-                        <source srcset="img/cat-photo.jpg" media="(min-width: 950px)">
-                        <img src="img/cat-photo-thumb.jpg" alt="Close up of a cat's face.">
+                        <source srcset="img/cat-photo.webp" media="(min-width: 950px)">
+                        <img src="img/cat-photo-thumb.webp" alt="Close up of a cat's face.">
                     </picture>
 
                     <div>
@@ -143,8 +153,8 @@
                 </article>
                 <article>
                     <picture>
-                        <source srcset="img/beach-wind.jpg" media="(min-width: 950px)">
-                        <img src="img/beach-wind-thumb.jpg" alt="Person at the beach on a windy day.">
+                        <source srcset="img/beach-wind.webp" media="(min-width: 950px)">
+                        <img src="img/beach-wind-thumb.webp" alt="Person at the beach on a windy day.">
                     </picture>
 
                     <div>

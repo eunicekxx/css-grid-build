@@ -93,6 +93,10 @@ p {
   word-spacing: 2.56px;
 }
 
+h1 {
+  font-size: clamp(2.369rem, 1.9963rem + 1.8633vw, 4.209rem);
+}
+
 header {
   border-bottom: 1px solid #ccc;
   box-shadow: 0 0 8px #ccc;
@@ -105,6 +109,11 @@ header .inner-container {
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
+}
+@media screen and (min-width: 1900px) {
+  header .inner-container {
+    max-width: 1850px;
+  }
 }
 header button {
   padding: 0.75px;
@@ -119,7 +128,7 @@ header nav {
 }
 header nav a {
   display: block;
-  padding: 0.25rem;
+  padding: 0.5rem;
 }
 header nav li {
   margin: 0.25rem 0;
@@ -128,7 +137,7 @@ header .show {
   max-height: 200px;
 }
 
-@media screen and (min-width: 540px) {
+@media screen and (min-width: 630px) {
   header button {
     display: none;
   }
@@ -152,11 +161,37 @@ section {
   padding: 0 1rem;
   display: grid;
   gap: 1rem;
+  align-items: start;
 }
 @media screen and (min-width: 1900px) {
   .grid-container {
     max-width: 1850px;
   }
+}
+
+article {
+  margin-bottom: 32px;
+}
+
+.recent-posts img:first-of-type {
+  aspect-ratio: 625/417 auto;
+}
+
+.popular-posts h2 {
+  margin-bottom: 1rem;
+}
+.popular-posts article {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  display: flex;
+  gap: 1rem;
+}
+.popular-posts article div {
+  padding: 1.5rem 1.5rem 0 1.5rem;
+}
+.popular-posts article img {
+  border-radius: 5px 5px 0 0;
+  min-width: 400px;
 }
 
 @media screen and (min-width: 950px) {
@@ -165,9 +200,19 @@ section {
   }
   .grid-container .recent-posts {
     grid-column: 1/span 6;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+  .grid-container .recent-posts h2,
+  .grid-container .recent-posts article:first-of-type {
+    grid-column: 1/-1;
   }
   .grid-container .popular-posts {
     grid-column: 7/span 6;
+  }
+  .grid-container .popular-posts article {
+    display: block;
   }
   .grid-container footer {
     grid-column: 1/-1;
@@ -181,21 +226,6 @@ section {
     grid-column: 9/span 4;
   }
 }
-article {
-  margin-bottom: 32px;
-}
-
-.popular-posts article {
-  border: 1px solid #ccc;
-  border-radius: 5px;
-}
-.popular-posts article div {
-  padding: 1.5rem 1.5rem 0 1.5rem;
-}
-.popular-posts article img {
-  border-radius: 5px 5px 0 0;
-}
-
 footer {
   max-width: 1500px;
   margin: 0 auto;
@@ -204,6 +234,15 @@ footer {
   flex-wrap: wrap;
   gap: 1rem;
 }
+@media screen and (min-width: 1900px) {
+  footer {
+    max-width: 1850px;
+  }
+}
 footer div {
   flex: 1;
+}
+footer div a {
+  padding: 0.5rem;
+  display: block;
 }/*# sourceMappingURL=styles.css.map */
